@@ -1,0 +1,291 @@
+@import "reset";
+
+:root {
+  --dark-blue-intro-email-signup: hsl(217, 28%, 15%);
+  --dark-blue-main: hsl(218, 28%, 13%);
+  --dark-blue-footer: hsl(216, 53%, 9%);
+  --dark-blue-testimonials: hsl(219, 30%, 18%);
+
+  --cyan-call-to-action: hsl(176, 68%, 64%);
+  --blue-call-to-action: hsl(198, 60%, 50%);
+  --light-red-error: hsl(0, 100%, 63%);
+
+  --white: hsl(0, 0%, 100%);
+
+  --heading-font: "Open Sans", sans-serif;
+  --body-font: "Raleway", sans-serif;
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    background-color: var(--dark-blue-main);
+  }
+  nav {
+    width: 95%;
+    margin: 0 auto;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+
+    .logo {
+      img {
+        width: 80%;
+      }
+    }
+
+    ul {
+      display: flex;
+      gap: 10px;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+
+  main {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    background-color: var(--dark-blue-main);
+
+    .hero-img {
+      margin-top: 50px;
+    }
+
+    h2 {
+      font-size: 35px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    p {
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    button {
+      width: 80%;
+      border: none;
+      padding: 15px 5px;
+      background-image: linear-gradient(
+        to right,
+        var(--cyan-call-to-action),
+        var(--blue-call-to-action)
+      );
+      border-radius: 50px;
+      margin-bottom: 150px;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+
+    .top-div div,
+    .bottom-div div {
+      width: 90%;
+      margin: 50px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h4 {
+        font-size: 22px;
+        font-weight: 700;
+        margin: 30px 0 10px 0;
+      }
+
+      p {
+        text-align: center;
+        font-weight: 100;
+      }
+    }
+
+    .top-div .first {
+      margin-top: 0;
+    }
+
+    .bottom-div .second {
+      margin-bottom: 150px;
+    }
+  }
+
+  .stay-productive {
+    width: 90%;
+    margin: 0 auto;
+
+    h2 {
+      font-weight: 700;
+      font-size: 20px;
+      margin: 15px 0;
+    }
+
+    p {
+      font-weight: 100;
+      margin: 10px 0;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      border-bottom: 1px solid var(--cyan-call-to-action);
+      width: fit-content;
+      color: var(--cyan-call-to-action);
+      margin-bottom: 100px;
+
+      a {
+        color: var(--cyan-call-to-action);
+        font-family: var(--heading-font);
+      }
+    }
+  }
+
+  .testimonials {
+    width: 90%;
+    margin: 0 auto;
+
+    // .testimoni-1,
+    // .testimoni-1 *,
+    // .testimoni-2,
+    // .testimoni-2 *,
+    // .testimoni-3,
+    // .testimoni-3 * {
+    //   background-color: var(--dark-blue-testimonials);
+    // }
+
+    .testimoni-1,
+    .testimoni-2,
+    .testimoni-3 {
+      margin: 30px 0;
+      padding: 20px 20px;
+      background-color: var(--dark-blue-testimonials);
+
+      .user {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 15%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .email-signup {
+    width: 90%;
+    margin: 0 auto;
+    // margin-bottom: 100px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--dark-blue-intro-email-signup);
+
+    // * {
+    //   background-color: red;
+    // }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 100;
+    }
+
+    .inputs {
+      input,
+      button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px 10px;
+        border-radius: 50px;
+        border: none;
+      }
+
+      input {
+        background-color: var(--white);
+        margin-top: 30px;
+        font-family: var(--heading-font);
+        padding-left: 30px;
+        color: black;
+      }
+
+      button {
+        background-color: var(--cyan-call-to-action);
+      }
+    }
+  }
+
+  footer {
+    background-color: var(--dark-blue-footer);
+
+    .footer-element-wrapper {
+      width: 90%;
+      margin: 0 auto;
+
+      .logo-text {
+        padding-bottom: 20px;
+
+        .first-img {
+          padding-top: 40px;
+          margin-bottom: 40px;
+        }
+
+        .text {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+        }
+      }
+
+      .contact-info {
+        .phone,
+        .email {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+
+        .phone {
+          padding: 10px 0;
+        }
+
+        .email {
+          padding-bottom: 40px;
+        }
+      }
+
+      .link1,
+      .link2 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .link1 {
+        padding-bottom: 25px;
+      }
+
+      .link2 {
+        padding-bottom: 50px;
+      }
+
+      .socials {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0 40px 0;
+
+        svg {
+          width: 10%;
+          fill: white;
+        }
+      }
+    }
+  }
+}
