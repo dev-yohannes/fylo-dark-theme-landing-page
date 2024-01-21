@@ -100,42 +100,47 @@ svg {
     background-color: var(--dark-blue-main);
   }
   nav {
+    background-color: var(--dark-blue-intro-email-signup);
+  }
+  nav .nav-elements {
     width: 95%;
     margin: 0 auto;
     min-height: 10vh;
     display: flex;
     align-items: center;
   }
-  nav .logo img {
+  nav .nav-elements .logo img {
     width: 80%;
   }
-  nav ul {
+  nav .nav-elements ul {
     display: flex;
     gap: 10px;
   }
-  nav ul li {
+  nav .nav-elements ul li {
     list-style: none;
   }
   main {
+    background-color: var(--dark-blue-intro-email-signup);
+  }
+  main .main-elements {
     text-align: center;
     width: 90%;
     margin: 0 auto;
-    background-color: var(--dark-blue-main);
   }
-  main .hero-img {
-    margin-top: 50px;
+  main .main-elements .hero-img {
+    padding: 50px;
   }
-  main h2 {
+  main .main-elements h2 {
     font-size: 35px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 25px;
   }
-  main p {
+  main .main-elements p {
     line-height: 1.7;
     margin-bottom: 30px;
   }
-  main button {
+  main .main-elements button {
     width: 80%;
     border: none;
     padding: 15px 5px;
@@ -146,6 +151,16 @@ svg {
   .cards {
     display: flex;
     flex-direction: column;
+  }
+  .cards ::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../images/bg-curvy-mobile.svg");
+    width: 100%;
+    z-index: -1;
   }
   .cards .top-div div,
   .cards .bottom-div div {
@@ -199,112 +214,119 @@ svg {
     color: var(--cyan-call-to-action);
     font-family: var(--heading-font);
   }
-  .testimonials {
-    width: 90%;
-    margin: 0 auto;
+  .for-email-sec {
+    position: relative;
   }
-  .testimonials .testimoni-1,
-  .testimonials .testimoni-2,
-  .testimonials .testimoni-3 {
+  .for-email-sec .testimonials {
+    width: 90%;
+    margin: 0 auto 400px auto;
+  }
+  .for-email-sec .testimonials .testimoni-1,
+  .for-email-sec .testimonials .testimoni-2,
+  .for-email-sec .testimonials .testimoni-3 {
     margin: 30px 0;
     padding: 20px 20px;
     background-color: var(--dark-blue-testimonials);
   }
-  .testimonials .testimoni-1 .user,
-  .testimonials .testimoni-2 .user,
-  .testimonials .testimoni-3 .user {
+  .for-email-sec .testimonials .testimoni-1 .user,
+  .for-email-sec .testimonials .testimoni-2 .user,
+  .for-email-sec .testimonials .testimoni-3 .user {
     margin-top: 20px;
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  .testimonials .testimoni-1 .user img,
-  .testimonials .testimoni-2 .user img,
-  .testimonials .testimoni-3 .user img {
+  .for-email-sec .testimonials .testimoni-1 .user img,
+  .for-email-sec .testimonials .testimoni-2 .user img,
+  .for-email-sec .testimonials .testimoni-3 .user img {
     width: 15%;
     border-radius: 50%;
   }
-  .email-signup {
+  .for-email-sec .email-signup {
     width: 90%;
     margin: 0 auto;
     padding: 20px;
     text-align: center;
     background-color: var(--dark-blue-intro-email-signup);
+    position: absolute;
+    top: 47%;
+    left: 20px;
   }
-  .email-signup h2 {
+  .for-email-sec .email-signup h2 {
     font-size: 20px;
     font-weight: 700;
   }
-  .email-signup p {
+  .for-email-sec .email-signup p {
     font-weight: 100;
   }
-  .email-signup .inputs input,
-  .email-signup .inputs button {
+  .for-email-sec .email-signup .inputs input,
+  .for-email-sec .email-signup .inputs button {
     width: 100%;
     margin: 10px 0;
     padding: 20px 10px;
     border-radius: 50px;
     border: none;
   }
-  .email-signup .inputs input {
+  .for-email-sec .email-signup .inputs input {
     background-color: var(--white);
     margin-top: 30px;
     font-family: var(--heading-font);
     padding-left: 30px;
     color: black;
   }
-  .email-signup .inputs button {
+  .for-email-sec .email-signup .inputs button {
     background-color: var(--cyan-call-to-action);
   }
-  footer {
+  .for-email-sec footer {
+    padding-top: 200px;
     background-color: var(--dark-blue-footer);
   }
-  footer .footer-element-wrapper {
+  .for-email-sec footer .footer-element-wrapper {
     width: 90%;
     margin: 0 auto;
   }
-  footer .footer-element-wrapper .logo-text {
+  .for-email-sec footer .footer-element-wrapper .logo-text {
     padding-bottom: 20px;
   }
-  footer .footer-element-wrapper .logo-text .first-img {
+  .for-email-sec footer .footer-element-wrapper .logo-text .first-img {
     padding-top: 40px;
     margin-bottom: 40px;
   }
-  footer .footer-element-wrapper .logo-text .text {
+  .for-email-sec footer .footer-element-wrapper .logo-text .text {
     display: flex;
     align-items: flex-start;
     gap: 20px;
   }
-  footer .footer-element-wrapper .contact-info .phone,
-  footer .footer-element-wrapper .contact-info .email {
+  .for-email-sec footer .footer-element-wrapper .contact-info .phone,
+  .for-email-sec footer .footer-element-wrapper .contact-info .email {
     display: flex;
     gap: 20px;
     align-items: center;
   }
-  footer .footer-element-wrapper .contact-info .phone {
+  .for-email-sec footer .footer-element-wrapper .contact-info .phone {
     padding: 10px 0;
   }
-  footer .footer-element-wrapper .contact-info .email {
+  .for-email-sec footer .footer-element-wrapper .contact-info .email {
     padding-bottom: 40px;
   }
-  footer .footer-element-wrapper .link1,
-  footer .footer-element-wrapper .link2 {
+  .for-email-sec footer .footer-element-wrapper .link1,
+  .for-email-sec footer .footer-element-wrapper .link2 {
     display: flex;
     flex-direction: column;
   }
-  footer .footer-element-wrapper .link1 {
+  .for-email-sec footer .footer-element-wrapper .link1 {
     padding-bottom: 25px;
   }
-  footer .footer-element-wrapper .link2 {
+  .for-email-sec footer .footer-element-wrapper .link2 {
     padding-bottom: 50px;
   }
-  footer .footer-element-wrapper .socials {
+  .for-email-sec footer .footer-element-wrapper .socials {
     display: flex;
     justify-content: center;
     gap: 20px;
     padding: 20px 0 40px 0;
   }
-  footer .footer-element-wrapper .socials svg {
+  .for-email-sec footer .footer-element-wrapper .socials svg {
     width: 10%;
     fill: white;
   }
