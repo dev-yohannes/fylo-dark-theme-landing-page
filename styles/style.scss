@@ -16,7 +16,7 @@
   --body-font: "Raleway", sans-serif;
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 360px) {
   body {
     background-color: var(--dark-blue-main);
   }
@@ -28,6 +28,7 @@
       margin: 0 auto;
       min-height: 10vh;
       display: flex;
+      justify-content: space-between;
       align-items: center;
 
       .logo {
@@ -42,6 +43,10 @@
 
         li {
           list-style: none;
+
+          a {
+            font-size: 15px;
+          }
         }
       }
     }
@@ -87,23 +92,25 @@
   }
 
   .cards {
-    ::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-image: url("../images/bg-curvy-mobile.svg");
-      width: 100%;
-      z-index: -1;
-    }
+    // &::before {
+    //   content: "";
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   background-image: url("../images/bg-curvy-mobile.svg");
+    //   width: 100%;
+    //   z-index: -1;
+    // }
 
     display: flex;
     flex-direction: column;
+    padding-top: 100px;
 
     .top-div div,
     .bottom-div div {
       width: 90%;
+      max-width: 500px;
       margin: 50px auto;
       display: flex;
       flex-direction: column;
@@ -161,143 +168,309 @@
     }
   }
 
-  .for-email-sec {
-    position: relative;
+  .testimonials {
+    width: 90%;
+    margin: 0 auto 200px auto;
 
-    .testimonials {
-      width: 90%;
-      margin: 0 auto 400px auto;
-
-      .testimoni-1,
-      .testimoni-2,
-      .testimoni-3 {
-        margin: 30px 0;
-        padding: 20px 20px;
-        background-color: var(--dark-blue-testimonials);
-
-        .user {
-          margin-top: 20px;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-
-          img {
-            width: 15%;
-            border-radius: 50%;
-          }
-        }
-      }
-    }
-
-    .email-signup {
-      width: 90%;
-      margin: 0 auto;
-      // margin-bottom: 100px;
-      padding: 20px;
-      text-align: center;
-      background-color: var(--dark-blue-intro-email-signup);
-      position: absolute;
-      top: 47%;
-      left: 20px;
-
-      h2 {
-        font-size: 20px;
-        font-weight: 700;
-      }
+    .testimoni-1,
+    .testimoni-2,
+    .testimoni-3 {
+      margin: 30px 0;
+      padding: 20px 20px;
+      background-color: var(--dark-blue-testimonials);
 
       p {
+        color: rgb(224, 220, 220);
         font-weight: 100;
       }
 
-      .inputs {
-        input,
-        button {
-          width: 100%;
-          margin: 10px 0;
-          padding: 20px 10px;
-          border-radius: 50px;
-          border: none;
+      .user {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 10%;
+          border-radius: 50%;
         }
 
-        input {
-          background-color: var(--white);
-          margin-top: 30px;
-          font-family: var(--heading-font);
-          padding-left: 30px;
-          color: black;
-        }
+        .names {
+          p:nth-of-type(1) {
+            font-weight: 700;
+            margin-bottom: 3px;
+            font-size: 15px;
+          }
 
-        button {
-          background-color: var(--cyan-call-to-action);
+          p:nth-of-type(2) {
+            font-size: 12px;
+          }
         }
       }
     }
+  }
 
-    footer {
-      padding-top: 200px;
-      background-color: var(--dark-blue-footer);
+  .email-signup {
+    width: 90%;
+    max-width: 700px;
+    margin: 0 auto -150px;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--dark-blue-intro-email-signup);
+    position: relative;
 
-      .footer-element-wrapper {
-        width: 90%;
-        margin: 0 auto;
+    h2 {
+      font-size: 20px;
+      font-weight: 700;
+    }
 
-        .logo-text {
-          padding-bottom: 20px;
+    p {
+      font-weight: 100;
+    }
 
-          .first-img {
-            padding-top: 40px;
-            margin-bottom: 40px;
-          }
+    .inputs {
+      input,
+      button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 20px 10px;
+        border-radius: 50px;
+        border: none;
+      }
 
-          .text {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-          }
+      input {
+        background-color: var(--white);
+        margin-top: 30px;
+        font-family: var(--heading-font);
+        padding-left: 30px;
+        color: black;
+      }
+
+      button {
+        background-color: var(--cyan-call-to-action);
+      }
+    }
+  }
+
+  footer {
+    padding-top: 200px;
+    background-color: var(--dark-blue-footer);
+    width: 100%;
+    // display: none;
+
+    .footer-element-wrapper {
+      width: 90%;
+      margin: 0 auto;
+
+      .logo-text {
+        padding-bottom: 20px;
+
+        .first-img {
+          padding-top: 40px;
+          margin-bottom: 40px;
         }
 
-        .contact-info {
-          .phone,
-          .email {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-          }
-
-          .phone {
-            padding: 10px 0;
-          }
-
-          .email {
-            padding-bottom: 40px;
-          }
-        }
-
-        .link1,
-        .link2 {
+        .text {
           display: flex;
-          flex-direction: column;
-        }
-
-        .link1 {
-          padding-bottom: 25px;
-        }
-
-        .link2 {
-          padding-bottom: 50px;
-        }
-
-        .socials {
-          display: flex;
-          justify-content: center;
+          align-items: flex-start;
           gap: 20px;
-          padding: 20px 0 40px 0;
-
-          svg {
-            width: 10%;
-            fill: white;
-          }
         }
+      }
+
+      .contact-info {
+        .phone,
+        .email {
+          display: flex;
+          gap: 20px;
+          align-items: center;
+        }
+
+        .phone {
+          padding: 10px 0;
+        }
+
+        .email {
+          padding-bottom: 40px;
+        }
+      }
+
+      .link1,
+      .link2 {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .link1 {
+        padding-bottom: 25px;
+      }
+
+      .link2 {
+        padding-bottom: 50px;
+      }
+
+      .socials {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px 0 40px 0;
+
+        svg {
+          width: 7%;
+          fill: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 668px) {
+  .testimonials {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    * {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+  footer {
+    padding-bottom: 50px;
+    .footer-element-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 50px;
+
+      .logo-text {
+        max-width: 400px;
+      }
+
+      .link1,
+      .link2 {
+        max-width: 500px;
+      }
+
+      .socials {
+        width: 400px;
+        svg {
+          width: 10%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 922px) {
+  .testimonials {
+    margin-bottom: 200px;
+
+    .testimoni-1,
+    .testimoni-2,
+    .testimoni-3 {
+      padding: 50px 20px;
+    }
+
+    * {
+      width: 100%;
+    }
+  }
+
+  footer {
+    .socials {
+      svg {
+        width: 7%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 911px) {
+  main {
+    .main-elements {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      // z-index: 1;
+
+      h2 {
+        max-width: 600px;
+      }
+
+      p {
+        max-width: 700px;
+      }
+
+      button {
+        max-width: 300px;
+      }
+    }
+  }
+
+  .cards {
+    display: flex;
+    // flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-direction: row;
+    margin-bottom: 100px;
+
+    // .desktop-curve {
+    //   width: 100%;
+    //   margin-top: -350px;
+    //   z-index: -1;
+    //   display: none;
+    // }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .top-div {
+      .first {
+        margin-top: 50px;
+      }
+    }
+
+    .bottom-div {
+      .second {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  footer {
+    .socials {
+      svg {
+        width: 7%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1214px) {
+  .stay-productive {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    .left {
+      max-width: 500px;
+    }
+  }
+
+  footer {
+    .socials {
+      svg {
+        width: 7%;
       }
     }
   }
